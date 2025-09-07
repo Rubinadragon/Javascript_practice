@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html"></p>
+</body>
+<script>
+    /*Lag en ny HTML-fil kalt if2.html med standard HTML-kode klar.
+
+    Hint: I denne oppgaven skal du bruke en else if-test. Dette for å lage to if-betingelser. Se mer hos W3Schools (Lenker til en ekstern side.).
+
+    Lag en variabel som inneholder alderen din.
+
+    Lag klar en variabel som skal fylles med tekst og senere skrives ut.
+
+    Deretter lager du en if-test som sjekker følgende:
+
+        Dersom tallet i variabelen fra steget over er mindre enn 18, gjør klar for å skrive ut teksten "Du er ikke myndig".
+        Dersom tallet i variabelen fra steget over er mellom 18 og 62 (Hint: Det kan leses "større enn eller lik 18 og mindre enn eller lik 62"), gjør klar for å skrive ut teksten "Du er myndig og klar for studier eller arbeidslivet".
+        Dersom tallet i variabelen fra steget over over 62, gjør klar for å skrive ut teksten "Du er pensjonsklar!".
+
+    Til slutt skriver du ut teksten fra if-testen.*/
+
+    const age = 26
+    let print = ""
+
+    if(age < 18){
+        print = `Du er ${age} år gammel og ikke myndig`
+    } else if(age >= 62){
+        print = `Du er ${age} år gammel og pensjonsklar`
+    } else {
+        print = `Du er ${age} år gammel og myndig`
+    }
+
+    document.getElementById("html").innerHTML = print
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="print"></p>
+</body>
+<script>
+    /*Lag en ny HTML-fil kalt if4.html med standard HTML-kode klar.
+
+Lag klar en <p>-tag med id utskrift.
+
+Lag to variabler kalt henholdsvis ITF19019_grade og ITF10511_grade. Gi en variabel verdien "A" og den andre "F".
+
+Lag en variabel kalt ITF19019_passed. Verdien av variabelen skal bestemmes ved bruk av en ternary operator. 
+Hvis ITF19019_grade er lik F, skal verdien av ITF19019_passed være true (boolean). Hvis ITF19019_grade ikke er lik F,
+skal verdien være false.
+
+Lag en variabel kalt ITF10511_passed. 
+Bruk en ternary operator for å sette verdien av denne basert på ITF10511_grade på samme måte som du gjorde for ITF19019 over.
+
+Lag en variabel kalt countPassed, med verdien 0 (tallet null).
+
+Lag en if-test som sjekker om ITF19019_passed er true. Hvis den er det, skal countPassed økes med 1.
+
+Lag en if-test som sjekker om ITF10511_passed er true. Hvis den er det, skal countPassed økes med 1.
+
+Lag en variabel kalt printText. Bruk template literals for å skrive ut setningen 
+"Du har bestått X av 2 kurs" til <p>-tagen med id utskrift, hvor X er antallet som ligger lagret i variabelen countPassed.*/
+
+    const grade1 = "A"
+    const grade2 = "B"
+
+    let grade1_passed = grade1 === "A" ? true : false
+    let grade2_passed = grade2 === "A" ? true : false
+
+    let gradesPassed = 0
+
+    if(grade1_passed === true){
+        gradesPassed++
+    }
+    if(grade2_passed === true){
+        gradesPassed++
+    }
+
+    document.getElementById("print").innerHTML = gradesPassed
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html"></p>
+</body>
+<script>
+    /*Lag en ny HTML-fil kalt if1.html med standard HTML-kode klar.
+
+    Lag en variabel som inneholder ditt navn, og deklarer en variabel du kaller utskrift som du ikke fyller med noen verdi enda.
+
+    Deretter lager du en if-test som sjekker følgende:
+
+        dersom variabelen inneholder akkurat ditt navn, fyll variabelen utskrift med en tekststreng ala "Mitt navn er fornavn etternavn".
+        dersom variabelen IKKE inneholder ditt navn, fyll variabelen utskrift med en tekststreng ala "Jeg heter ikke fornavn etternavn".
+        PS: fornavn byttes ut med verdien fra den første variabelen - og ditt etternavn skrives som tekst.
+
+    Til slutt skriver du ut innholdet i variabelen utskrift til en <p>-tag.
+
+    Kjør koden og sjekk om den skriver ut riktig setning. Forsøk deretter å bytte verdien i variabelen med ditt fornavn til noe annet og kjør koden for å bekrefte at if/else-testen din fungerer.*/
+    const myName = "Cecilie"
+
+    let print = ""
+
+    if(myName === "Cecilie"){
+        print = `Mitt navn er ${myName}`
+    } else {
+        print = `Navnet mitt er ikke ${myName}`
+    }
+
+    console.log(print)
+
+    document.getElementById("html").innerHTML = print
+</script>
+</html>

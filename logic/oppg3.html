@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="childrenTotal"></p>
+    <p id="girlsTotal"></p>
+    <p id="boysTotal"></p>
+</body>
+<script>
+    /*Lag en ny HTML-fil kalt if3.html med standard HTML-kode klar.
+
+    Lag tre variabler kalt barn1, barn2 og barn3. Gi dem vilkårlige verdier "gutt" eller "jente".
+
+    Lag to nye variabler kalt antall_gutter og antall_jenter, og gi dem verdien 0.
+
+    Lag if-tester for å sjekke om variablene barn1, barn2 og barn3 er gutt eller jente. Hvis verdien er gutt, 
+    skal variabelen antall_gutter inkrementeres med 1 (bli 1 større, eller legge til 1), 
+    hvis verdien er jente, skal variabelen antall_jenter inkrementeres med 1.
+
+    Lag klar utskrift som viser følgende: Gutter: X, Jenter: Y, hvor X og Y må byttes it med antall_gutter og antall_jenter*/
+
+    const child1 = "boy"
+    const child2 = "girl"
+    const child3 = "girl"
+
+    let numberOfChildren = 0
+    let numberOfBoys = 0
+    let numberOfGirls = 0
+
+    if(child1 === "boy"){
+        numberOfChildren++
+        numberOfBoys++
+    } else {
+        numberOfChildren++
+        numberOfGirls++
+    }
+
+    if(child2 === "boy"){
+        numberOfChildren++
+        numberOfBoys++
+    } else {
+        numberOfChildren++
+        numberOfGirls++
+    }
+
+    if(child3 === "boy"){
+        numberOfChildren++
+        numberOfBoys++
+    } else {
+        numberOfChildren++
+        numberOfGirls++
+    }
+    //console.log(number)
+
+    document.getElementById("childrenTotal").innerHTML = `Antall barn: ${numberOfChildren}`
+    document.getElementById("girlsTotal").innerHTML = `Antall jenter: ${numberOfGirls}`
+    document.getElementById("boysTotal").innerHTML = `Antall gutter: ${numberOfBoys}`
+</script>
+</html>
