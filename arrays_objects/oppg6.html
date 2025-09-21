@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="html"></ul>
+</body>
+<script>
+    /*Lag en ny HTML-fil kalt gamefilter.html. Lag en heading (<h1>) med teksten iOS games. Lag en <ul>-tag med index "filter" uten listeelementer.
+
+    I JavaScript, skriv inn følgende array med objecter:
+    const games = [{title: "Angry Birds",platforms: ["iOS", "Android"] },
+    {title: "Nongram",platforms: ["Android"]},
+    {title: "Plants vs Zombies",platforms: ["iOS", "Android", "Windows", "MacOS"] },
+    { title: "Punball",platforms: ["Windows", "Android"]},
+    {title: "Planet Zoo",platforms: ["Windows", "MacOS"] },
+    {title: "Woordle",platforms: ["iOS", "MacOS"] }]
+
+    Bruk .filter()- og .includes()-metodene for å lage en ny array med kun spill som er tilgjengelige for iOS 
+    (de kan godt være tilgjengelig for både iOS og Android, men de spillene som kun er tilgjengelige på android skal ikke med i filtreringen)
+
+    Bruk det du har lært de forrige øvingsoppgavene til å liste ut spill-titlene på spillene i den nye arrayen til <ul> med id "filter".*/
+
+    const games = [
+        {
+            title: "Horizon: Zero Dawn",
+            platforms: ["PS4", "PS5", "PC"]
+        },
+        {
+            title: "Horizon: Forbidden West",
+            platforms: ["PS4", "PS5", "PC"]
+        },
+        {
+            title: "Control",
+            platforms: ["PS4", "PS5", "PC", "Nintendo Switch", "Xbox One", "Xbox series X/S"]
+        },
+        {
+            title: "Spyro Reignited Trilogy",
+            platforms: ["PS4", "Xbox One", "PC", "Nintendo Switch"]
+        },
+        {
+            title: "The Legend of Zelda: Breath of the Wild",
+            platforms: ["Wii U","Nintendo Switch", "Nintendo Switch 2"]
+        },
+        {
+            title: "Okami",
+            platforms: ["PS2", "PS3", "Wii", "PS4", "XBox One", "Nintendo Switch"]
+        },
+        {
+            title: "Shadow of the Colossus",
+            platforms: ["PS2", "PS3", "PS4"]
+        },
+        {
+            title: "The Legend of Zelda: Skyward Sword",
+            platforms: ["Wii", "Nintendo Switch"]
+        },
+        {
+            title: "Pokémon Legends: Z-A",
+            platforms: ["Nintendo Switch", "Nintendo Switch 2"]
+        },
+        {
+            title: "Split Fiction",
+            platforms: ["PS5", "Nintendo Switch 2", "Xbox Series X/S", "PC"]
+        },
+    ]
+
+    gamesHTML = ""
+    games.filter((game) => game.platforms === "PS5")
+    console.log(games)
+    games.map(game => gamesHTML += `<li>${game.title} (${game.platforms.join(", ")})</li>`)
+
+    document.getElementById("html").innerHTML = gamesHTML
+</script>
+</html>

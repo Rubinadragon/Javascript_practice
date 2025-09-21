@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html"></p>
+</body>
+<script>
+    /*Lag en fil kalt animals.html. Kopier inn arrayen dyr fra filen dyr.html fra øvingsoppgave 1. 
+    Under variabelen dyr, lag en ny variabel kalt animals som inneholder en array med de engelske oversettelsene av dyrene du har lagret i dyr.
+
+    Lag en variabel tekst hvor du setter sammen tekststrenger og referanser til arrayene i dyr og animals for å lage en setning ala "X1 er et dyr. 
+    Det heter Y1 på engelsk. X2 er også et dyr, som heter Y2 på engelsk.".
+
+    Bytt ut X1 og X2 med to vilkårlige indexer fra dyr, for eksempel 2 og 8. 
+    Bytt ut Y1 og Y2 med verdier fra animals, slik at oversettelsene blir riktige.
+
+    Skriv ut setningen med oversettelser til en <p>-tag med id "setning".
+
+    Tankeøvelse: I setningen: gjør om indexene dyr[2] og dyr[8] til henholdsvis dyr[3] og dyr[5]. 
+    Hvorfor er ikke oversettelsene riktige lenger?*/
+
+    const animals = ["hest","ku","firfisle","krokodille","edderkopp","bille","blekksprut","ørn","spurv","snegle"]
+    const animalsEng = ["horse","cow","lizard","crocodile","spider","beetle","octopus","eagle","sparrow","snail"]
+
+    const sentence = `${animals[0]} heter ${animalsEng[0]} på engelsk.`
+
+    document.getElementById("html").innerHTML = sentence
+</script>
+</html>

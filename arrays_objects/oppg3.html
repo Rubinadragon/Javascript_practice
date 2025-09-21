@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html"></p>
+</body>
+<script>
+    /*Kopier arrayen dyr fra øvingsoppgave 1 inn i en ny HTML-fil, og kall den dyr-sortert.html. Gjør følgende med arrayen:
+
+    Bruk .push() for å legge til to dyr til i arrayen
+    Sorter arrayen alfabetisk.
+    Lag en variabel antallDyr som inneholder hvor mange dyr det er i arrayen ved hjelp av operatoren length. 
+
+    Skriv ut en <p>-tag med teksten "Antall dyr: X. ", hvor X er variabelen med antallet dyr, og skriv ut alle dyrene separert med komma etter antallet ved hjelp av indexene deres, eller en annen metode som vil gjøre det lettere.*/
+    const animals = ["hest","ku","firfisle","krokodille","edderkopp","bille","blekksprut","ørn","spurv","snegle"]
+
+    animals.push("slange")
+    animals.sort()
+
+    animalsLength = animals.length
+    animalsList = animals.join(", ")
+
+    console.log(animals)
+    document.getElementById("html").innerHTML = `Dyreliste: ${animalsList}, antall dyr: ${animalsLength}`
+</script>
+</html>

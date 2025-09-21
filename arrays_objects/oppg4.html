@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html"></p>
+    <ul id="events"></ul>
+</body>
+<script>
+    /*Lag en ny HTML-fil kalt years.html med standard HTML. Lag en variabel years som inneholder en indexert array med årstallene
+
+        1066
+        1564
+        1455
+        1346
+        1215
+
+    Bruk metoden .sort() med sammenligningsfunksjonen for å sortere arrayer med tall slik at årstallene kommer i synkende rekkefølge (nyeste årstall først). Kontroller at det blir riktig ved å skrive ut den sorterte arrayen til konsollen.
+
+    Lag en <ul>-tag med id "events" i HTML.
+
+    Lag en variabel eventHTML, som inneholder en tom tekststreng.
+
+    I JavaScript, bruk .map()-funksjonen for å bygge HTML i eventHTML-variabelen. For hvert årstall i arrayen skal du legge til <li>ÅRSTALL</li> (hvor årstallet er det årstallet som er lagret på den aktuelle raden i arrayen) i eventHTML.
+
+    Skriv ut eventHTML til <ul> med id "events".*/
+
+    const years = [1066, 1564,1455,1346,1215]
+
+    let yearsList = ""
+
+    yearsSorted = years.sort().reverse()//.map((number) => {yearsList += `<li>${number}</li>`})
+
+    yearsSorted.map(number => yearsList += `<li>${number}</li>`)
+
+    console.log(yearsList)
+    
+    document.getElementById("events").innerHTML = yearsList
+</script>
+</html>

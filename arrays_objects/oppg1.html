@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="html"></p>
+</body>
+<script>
+    /*Lag en fil kalt dyr.html. I filen, opprett en variabel kalt dyr, 
+    som skal inneholde en array med 10 ulike dyrearter. 
+    Lag en variabel hvor du bruker en template literal med tekst og variabel-referanser til arrayen så du får en setning som ser slik ut:
+
+    "Her er det listet opp noen dyr, for eksempel XXX og XXX."
+
+    XXX og XXX skal selvfølgelig ikke stå der, 
+    her skal du skrive ut dyret på index 3 og index 7 ved hjelp av array-variabelnavnet og indexer.
+
+    Skriv ut tekststrengen til en <p>-tag med id-en utskrift.*/
+
+    const animals = ["hest","ku","firfisle","krokodille","edderkopp","bille","blekksprut","ørn","spurv","snegle"]
+
+    const list = `Her er en liste med dyr, for eksempel ${animals[0]} og ${animals[5]}`
+
+    document.getElementById("html").innerHTML = list
+</script>
+</html>
